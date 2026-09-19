@@ -1,0 +1,1787 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Download • Panel Jasteb Yamzz Market
+    </title>
+
+    <!-- Font Awesome 6.5.2 -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        body {
+
+            min-height: 100vh;
+
+            padding: 20px;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            font-family:
+                Arial,
+                sans-serif;
+
+            color: #fff;
+
+            background:
+                radial-gradient(
+                    circle at top,
+                    #12345a 0%,
+                    transparent 45%
+                ),
+                linear-gradient(
+                    180deg,
+                    #071321,
+                    #03070d
+                );
+
+        }
+
+
+        .container {
+
+            width: 100%;
+
+            max-width: 470px;
+
+        }
+
+
+        .card {
+
+            padding: 28px;
+
+            border-radius: 22px;
+
+            background:
+                rgba(255,255,255,.06);
+
+            border:
+                1px solid
+                rgba(255,255,255,.1);
+
+            backdrop-filter:
+                blur(15px);
+
+            box-shadow:
+                0 20px 60px
+                rgba(0,0,0,.4);
+
+        }
+
+
+        /* =========================
+           LOGO
+        ========================= */
+
+        .logo {
+
+            width: 70px;
+
+            height: 70px;
+
+            margin:
+                0 auto 18px;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            border-radius: 50%;
+
+            background:
+                #1677ff;
+
+            font-size: 30px;
+
+        }
+
+
+        .logo i {
+
+            font-size: 28px;
+
+        }
+
+
+        /* =========================
+           TITLE
+        ========================= */
+
+        h1 {
+
+            text-align: center;
+
+            font-size: 25px;
+
+            margin-bottom: 10px;
+
+        }
+
+
+        .description {
+
+            text-align: center;
+
+            color: #aeb9c8;
+
+            font-size: 14px;
+
+            line-height: 1.6;
+
+            margin-bottom: 25px;
+
+        }
+
+
+        /* =========================
+           TIMER
+        ========================= */
+
+        .timer {
+
+            text-align: center;
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .timer-number {
+
+            display: block;
+
+            font-size: 42px;
+
+            font-weight: 800;
+
+            color: #4da3ff;
+
+            margin-bottom: 5px;
+
+        }
+
+
+        .timer-text {
+
+            color: #9ba8b8;
+
+            font-size: 13px;
+
+        }
+
+
+        .progress {
+
+            width: 100%;
+
+            height: 8px;
+
+            overflow: hidden;
+
+            border-radius: 20px;
+
+            background:
+                rgba(255,255,255,.08);
+
+            margin-bottom: 25px;
+
+        }
+
+
+        .progress-bar {
+
+            width: 0;
+
+            height: 100%;
+
+            background:
+                #1677ff;
+
+            transition:
+                width 1s linear;
+
+        }
+
+
+        /* =========================
+           SECTION
+        ========================= */
+
+        .section {
+
+            display: none;
+
+        }
+
+
+        .section.active {
+
+            display: block;
+
+        }
+
+
+        /* =========================
+           REQUIREMENT
+        ========================= */
+
+        .requirement {
+
+            padding: 14px;
+
+            margin-bottom: 12px;
+
+            border-radius: 14px;
+
+            background:
+                rgba(255,255,255,.05);
+
+            border:
+                1px solid
+                rgba(255,255,255,.08);
+
+        }
+
+
+        .requirement-top {
+
+            display: flex;
+
+            justify-content:
+                space-between;
+
+            align-items: center;
+
+            margin-bottom: 10px;
+
+        }
+
+
+        .requirement-title {
+
+            font-size: 14px;
+
+            font-weight: bold;
+
+            display: flex;
+
+            align-items: center;
+
+        }
+
+
+        .requirement-title i {
+
+            width: 23px;
+
+            margin-right: 7px;
+
+            font-size: 18px;
+
+        }
+
+
+        /* WhatsApp */
+
+        .requirement:nth-of-type(1)
+        .requirement-title i {
+
+            color: #25D366;
+
+        }
+
+
+        /* YouTube */
+
+        .requirement:nth-of-type(2)
+        .requirement-title i {
+
+            color: #FF0000;
+
+        }
+
+
+        /* Instagram */
+
+        .requirement:nth-of-type(3)
+        .requirement-title i {
+
+            color: #E1306C;
+
+        }
+
+
+        .check {
+
+            color:
+                #35e27c;
+
+            display: none;
+
+        }
+
+
+        .check.show {
+
+            display: block;
+
+        }
+
+
+        /* =========================
+           BUTTON
+        ========================= */
+
+        button,
+        .action-button {
+
+            width: 100%;
+
+            padding: 13px;
+
+            border: 0;
+
+            border-radius: 11px;
+
+            background:
+                #1677ff;
+
+            color: white;
+
+            font-size: 14px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            text-decoration: none;
+
+            display: block;
+
+            text-align: center;
+
+            transition: .2s;
+
+        }
+
+
+        button:hover,
+        .action-button:hover {
+
+            transform:
+                translateY(-1px);
+
+            background:
+                #0867e8;
+
+        }
+
+
+        button:disabled {
+
+            opacity: .45;
+
+            cursor: not-allowed;
+
+            transform: none;
+
+        }
+
+
+        .action-button i,
+        button i {
+
+            margin-right: 7px;
+
+        }
+
+
+        /* =========================
+           SUCCESS
+        ========================= */
+
+        .success {
+
+            margin-top: 15px;
+
+            padding: 12px;
+
+            border-radius: 12px;
+
+            background:
+                rgba(53,226,124,.08);
+
+            color:
+                #5ff092;
+
+            font-size: 13px;
+
+            text-align: center;
+
+            display: none;
+
+        }
+
+
+        .success.show {
+
+            display: block;
+
+        }
+
+
+        /* =========================
+           UPLOAD
+        ========================= */
+
+        .upload-area {
+
+            margin-top: 15px;
+
+        }
+
+
+        input[type="text"],
+        input[type="file"] {
+
+            width: 100%;
+
+            padding: 13px;
+
+            margin-bottom: 12px;
+
+            border-radius: 11px;
+
+            border:
+                1px solid
+                rgba(255,255,255,.1);
+
+            background:
+                rgba(0,0,0,.25);
+
+            color: white;
+
+        }
+
+
+        input[type="file"] {
+
+            font-size: 12px;
+
+        }
+
+
+        input::file-selector-button {
+
+            padding: 8px 10px;
+
+            margin-right: 8px;
+
+            border: none;
+
+            border-radius: 7px;
+
+            background:
+                #1677ff;
+
+            color: white;
+
+            cursor: pointer;
+
+        }
+
+
+        /* =========================
+           MESSAGE
+        ========================= */
+
+        .message {
+
+            padding: 13px;
+
+            margin-bottom: 15px;
+
+            border-radius: 12px;
+
+            font-size: 13px;
+
+            display: none;
+
+        }
+
+
+        .message.show {
+
+            display: block;
+
+        }
+
+
+        .message.error {
+
+            background:
+                rgba(255,60,60,.1);
+
+            color:
+                #ff8b8b;
+
+        }
+
+
+        .message.info {
+
+            background:
+                rgba(22,119,255,.1);
+
+            color:
+                #72b5ff;
+
+        }
+
+
+        .message.success {
+
+            background:
+                rgba(53,226,124,.1);
+
+            color:
+                #5ff092;
+
+        }
+
+
+        /* =========================
+           WAITING
+        ========================= */
+
+        .waiting {
+
+            text-align: center;
+
+            padding:
+                15px 0;
+
+        }
+
+
+        .waiting-icon {
+
+            font-size: 42px;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .waiting-icon i {
+
+            font-size: 42px;
+
+        }
+
+
+        .waiting h2 {
+
+            margin-bottom: 10px;
+
+        }
+
+
+        .waiting p {
+
+            color:
+                #9ba8b8;
+
+            font-size: 14px;
+
+            line-height: 1.6;
+
+        }
+
+
+        /* =========================
+           DOWNLOAD
+        ========================= */
+
+        .download-final {
+
+            margin-top: 20px;
+
+            background:
+                #16a34a;
+
+            display: none;
+
+        }
+
+
+        .download-final.show {
+
+            display: block;
+
+        }
+
+
+        .download-final:hover {
+
+            background:
+                #15803d;
+
+        }
+
+
+        .small {
+
+            margin-top: 12px;
+
+            text-align: center;
+
+            color:
+                #7e8b9a;
+
+            font-size: 11px;
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+    <div class="card">
+
+
+        <!-- LOGO -->
+
+        <div class="logo">
+
+            <i class="fa-solid fa-download"></i>
+
+        </div>
+
+
+        <h1>
+
+            Panel Jasteb Yamzz Market
+
+        </h1>
+
+
+        <p class="description">
+
+            Selesaikan timer dan persyaratan
+            berikut sebelum mendapatkan
+            akses panel.
+
+        </p>
+
+
+        <!-- ======================
+             TIMER
+        ======================= -->
+
+        <div
+            id="timerSection"
+            class="section active"
+        >
+
+            <div class="timer">
+
+                <span
+                    id="countdown"
+                    class="timer-number"
+                >
+                    10
+                </span>
+
+                <span class="timer-text">
+
+                    Tunggu sebelum melanjutkan
+
+                </span>
+
+            </div>
+
+
+            <div class="progress">
+
+                <div
+                    id="progressBar"
+                    class="progress-bar"
+                ></div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ======================
+             REQUIREMENTS
+        ======================= -->
+
+        <div
+            id="requirementsSection"
+            class="section"
+        >
+
+
+            <div
+                id="message"
+                class="message"
+            ></div>
+
+
+            <!-- WHATSAPP -->
+
+            <div class="requirement">
+
+                <div class="requirement-top">
+
+                    <span
+                        class="requirement-title"
+                    >
+
+                        <i
+                            class="fa-brands fa-whatsapp"
+                        ></i>
+
+                        Follow Saluran WhatsApp
+
+                    </span>
+
+
+                    <span
+                        id="checkWhatsapp"
+                        class="check"
+                    >
+
+                        <i
+                            class="fa-solid fa-circle-check"
+                        ></i>
+
+                    </span>
+
+                </div>
+
+
+                <a
+                    id="whatsappButton"
+                    class="action-button"
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+
+                    <i
+                        class="fa-brands fa-whatsapp"
+                    ></i>
+
+                    Buka Saluran
+
+                </a>
+
+            </div>
+
+
+            <!-- YOUTUBE -->
+
+            <div class="requirement">
+
+                <div class="requirement-top">
+
+                    <span
+                        class="requirement-title"
+                    >
+
+                        <i
+                            class="fa-brands fa-youtube"
+                        ></i>
+
+                        Subscribe YouTube
+
+                    </span>
+
+
+                    <span
+                        id="checkYoutube"
+                        class="check"
+                    >
+
+                        <i
+                            class="fa-solid fa-circle-check"
+                        ></i>
+
+                    </span>
+
+                </div>
+
+
+                <a
+                    id="youtubeButton"
+                    class="action-button"
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+
+                    <i
+                        class="fa-brands fa-youtube"
+                    ></i>
+
+                    Subscribe
+
+                </a>
+
+            </div>
+
+
+            <!-- INSTAGRAM -->
+
+            <div class="requirement">
+
+                <div class="requirement-top">
+
+                    <span
+                        class="requirement-title"
+                    >
+
+                        <i
+                            class="fa-brands fa-instagram"
+                        ></i>
+
+                        Follow Instagram
+
+                    </span>
+
+
+                    <span
+                        id="checkInstagram"
+                        class="check"
+                    >
+
+                        <i
+                            class="fa-solid fa-circle-check"
+                        ></i>
+
+                    </span>
+
+                </div>
+
+
+                <a
+                    id="instagramButton"
+                    class="action-button"
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+
+                    <i
+                        class="fa-brands fa-instagram"
+                    ></i>
+
+                    Follow Instagram
+
+                </a>
+
+            </div>
+
+
+            <!-- SUCCESS -->
+
+            <div
+                id="requirementSuccess"
+                class="success"
+            >
+
+                <i
+                    class="fa-solid fa-circle-check"
+                ></i>
+
+                Semua syarat sudah diselesaikan
+
+            </div>
+
+
+            <!-- ======================
+                 UPLOAD
+            ======================= -->
+
+            <div
+                id="uploadArea"
+                class="upload-area"
+                style="display:none"
+            >
+
+
+                <input
+                    type="text"
+                    id="telegramUsername"
+                    placeholder="@username Telegram"
+                    maxlength="64"
+                >
+
+
+                <input
+                    type="file"
+                    id="proofFile"
+                    accept="image/jpeg,image/png,image/webp"
+                >
+
+
+                <button
+                    id="submitButton"
+                    onclick="submitProof()"
+                >
+
+                    <i
+                        class="fa-solid fa-cloud-arrow-up"
+                    ></i>
+
+                    Kirim Bukti ke Admin
+
+                </button>
+
+
+                <div class="small">
+
+                    <i
+                        class="fa-solid fa-circle-info"
+                    ></i>
+
+                    Upload screenshot bukti
+                    bahwa semua syarat sudah
+                    dilakukan.
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+        <!-- ======================
+             WAITING
+        ======================= -->
+
+        <div
+            id="waitingSection"
+            class="section"
+        >
+
+            <div class="waiting">
+
+                <div class="waiting-icon">
+
+                    <i
+                        class="fa-solid fa-hourglass-half"
+                    ></i>
+
+                </div>
+
+
+                <h2>
+
+                    Menunggu Konfirmasi
+
+                </h2>
+
+
+                <p>
+
+                    Bukti kamu sudah dikirim
+                    ke admin. Silakan tunggu
+                    admin memeriksa bukti
+                    tersebut.
+
+                </p>
+
+
+                <br>
+
+
+                <p>
+
+                    Status:
+
+                    <b id="statusText">
+
+                        MENUNGGU
+
+                    </b>
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- ======================
+             APPROVED
+        ======================= -->
+
+        <div
+            id="approvedSection"
+            class="section"
+        >
+
+            <div class="waiting">
+
+                <div class="waiting-icon">
+
+                    <i
+                        class="fa-solid fa-circle-check"
+                    ></i>
+
+                </div>
+
+
+                <h2>
+
+                    Verifikasi Berhasil
+
+                </h2>
+
+
+                <p>
+
+                    Bukti kamu sudah
+                    dikonfirmasi oleh admin.
+                    Tombol download sekarang
+                    sudah aktif.
+
+                </p>
+
+            </div>
+
+
+            <a
+                id="downloadButton"
+                class="action-button download-final"
+                href="#"
+                download
+            >
+
+                <i
+                    class="fa-solid fa-download"
+                ></i>
+
+                DOWNLOAD SEKARANG
+
+            </a>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+<script>
+
+
+/* =====================================
+   CONFIGURATION
+===================================== */
+
+const CONFIG = {
+
+    timer: 10,
+
+
+    whatsapp:
+        "https://whatsapp.com/channel/XXXXXXXXXXXX",
+
+
+    youtube:
+        "https://youtube.com/@XXXXXXXX",
+
+
+    instagram:
+        "https://instagram.com/XXXXXXXX",
+
+
+    download:
+        "/files/file.zip"
+
+};
+
+
+/* =====================================
+   ELEMENTS
+===================================== */
+
+const timerSection =
+    document.getElementById(
+        "timerSection"
+    );
+
+
+const requirementsSection =
+    document.getElementById(
+        "requirementsSection"
+    );
+
+
+const waitingSection =
+    document.getElementById(
+        "waitingSection"
+    );
+
+
+const approvedSection =
+    document.getElementById(
+        "approvedSection"
+    );
+
+
+const countdown =
+    document.getElementById(
+        "countdown"
+    );
+
+
+const progressBar =
+    document.getElementById(
+        "progressBar"
+    );
+
+
+const whatsappButton =
+    document.getElementById(
+        "whatsappButton"
+    );
+
+
+const youtubeButton =
+    document.getElementById(
+        "youtubeButton"
+    );
+
+
+const instagramButton =
+    document.getElementById(
+        "instagramButton"
+    );
+
+
+/* =====================================
+   SET SOCIAL LINKS
+===================================== */
+
+whatsappButton.href =
+    CONFIG.whatsapp;
+
+
+youtubeButton.href =
+    CONFIG.youtube;
+
+
+instagramButton.href =
+    CONFIG.instagram;
+
+
+document.getElementById(
+    "downloadButton"
+).href =
+    CONFIG.download;
+
+
+/* =====================================
+   SESSION ID
+===================================== */
+
+let sessionId =
+    localStorage.getItem(
+        "download_session_id"
+    );
+
+
+if (!sessionId) {
+
+    sessionId =
+        crypto.randomUUID();
+
+    localStorage.setItem(
+        "download_session_id",
+        sessionId
+    );
+
+}
+
+
+/* =====================================
+   REQUIREMENTS
+===================================== */
+
+let requirements = {
+
+    whatsapp: false,
+
+    youtube: false,
+
+    instagram: false
+
+};
+
+
+function markRequirement(type) {
+
+    requirements[type] =
+        true;
+
+
+    const check =
+        document.getElementById(
+            "check" +
+            type.charAt(0).toUpperCase() +
+            type.slice(1)
+        );
+
+
+    if (check) {
+
+        check.classList.add("show");
+          }
+
+    checkRequirements();
+
+}
+
+
+/* =====================================
+   CHECK ALL REQUIREMENTS
+===================================== */
+
+function checkRequirements() {
+
+    if (
+
+        requirements.whatsapp &&
+        requirements.youtube &&
+        requirements.instagram
+
+    ) {
+
+        document
+            .getElementById(
+                "requirementSuccess"
+            )
+            .classList
+            .add("show");
+
+
+        document
+            .getElementById(
+                "uploadArea"
+            )
+            .style.display =
+            "block";
+
+    }
+
+}
+
+
+/* =====================================
+   SOCIAL BUTTON EVENTS
+===================================== */
+
+whatsappButton.addEventListener(
+    "click",
+    () => {
+
+        setTimeout(
+            () => {
+
+                markRequirement(
+                    "whatsapp"
+                );
+
+            },
+            1200
+        );
+
+    }
+);
+
+
+youtubeButton.addEventListener(
+    "click",
+    () => {
+
+        setTimeout(
+            () => {
+
+                markRequirement(
+                    "youtube"
+                );
+
+            },
+            1200
+        );
+
+    }
+);
+
+
+instagramButton.addEventListener(
+    "click",
+    () => {
+
+        setTimeout(
+            () => {
+
+                markRequirement(
+                    "instagram"
+                );
+
+            },
+            1200
+        );
+
+    }
+);
+
+
+/* =====================================
+   TIMER
+===================================== */
+
+let remaining =
+    CONFIG.timer;
+
+
+const timer =
+    setInterval(
+        () => {
+
+            remaining--;
+
+
+            countdown.textContent =
+                remaining;
+
+
+            const progress =
+                (
+                    (
+                        CONFIG.timer -
+                        remaining
+                    )
+                    /
+                    CONFIG.timer
+                ) * 100;
+
+
+            progressBar.style.width =
+                progress + "%";
+
+
+            if (remaining <= 0) {
+
+                clearInterval(
+                    timer
+                );
+
+
+                countdown.innerHTML =
+                    '<i class="fa-solid fa-check"></i>';
+
+
+                progressBar.style.width =
+                    "100%";
+
+
+                timerSection
+                    .classList
+                    .remove("active");
+
+
+                requirementsSection
+                    .classList
+                    .add("active");
+
+            }
+
+        },
+        1000
+    );
+
+
+/* =====================================
+   MESSAGE
+===================================== */
+
+function showMessage(
+    text,
+    type = "info"
+) {
+
+    const box =
+        document.getElementById(
+            "message"
+        );
+
+
+    box.textContent =
+        text;
+
+
+    box.className =
+        "message show " + type;
+
+}
+
+
+/* =====================================
+   SUBMIT PROOF
+===================================== */
+
+async function submitProof() {
+
+    const username =
+        document
+            .getElementById(
+                "telegramUsername"
+            )
+            .value
+            .trim();
+
+
+    const file =
+        document
+            .getElementById(
+                "proofFile"
+            )
+            .files[0];
+
+
+    const button =
+        document.getElementById(
+            "submitButton"
+        );
+
+
+    if (!username) {
+
+        showMessage(
+            "Masukkan username Telegram terlebih dahulu.",
+            "error"
+        );
+
+        return;
+
+    }
+
+
+    if (!file) {
+
+        showMessage(
+            "Silakan upload screenshot bukti.",
+            "error"
+        );
+
+        return;
+
+    }
+
+
+    if (
+        !file.type.startsWith(
+            "image/"
+        )
+    ) {
+
+        showMessage(
+            "File harus berupa gambar.",
+            "error"
+        );
+
+        return;
+
+    }
+
+
+    if (
+        file.size >
+        5 * 1024 * 1024
+    ) {
+
+        showMessage(
+            "Ukuran gambar maksimal 5 MB.",
+            "error"
+        );
+
+        return;
+
+    }
+
+
+    button.disabled =
+        true;
+
+
+    button.innerHTML =
+        '<i class="fa-solid fa-spinner fa-spin"></i> Mengirim...';
+
+
+    try {
+
+        const reader =
+            new FileReader();
+
+
+        reader.onload =
+            async () => {
+
+                try {
+
+                    const response =
+                        await fetch(
+                            "/api/submit-proof",
+                            {
+
+                                method:
+                                    "POST",
+
+                                headers: {
+
+                                    "Content-Type":
+                                        "application/json"
+
+                                },
+
+                                body:
+                                    JSON.stringify({
+
+                                        sessionId:
+                                            sessionId,
+
+                                        username:
+                                            username,
+
+                                        image:
+                                            reader.result
+
+                                    })
+
+                            }
+                        );
+
+
+                    const data =
+                        await response.json();
+
+
+                    if (
+                        !response.ok
+                    ) {
+
+                        throw new Error(
+                            data.error ||
+                            "Gagal mengirim bukti."
+                        );
+
+                    }
+
+
+                    requirementsSection
+                        .classList
+                        .remove("active");
+
+
+                    waitingSection
+                        .classList
+                        .add("active");
+
+
+                    startStatusChecking();
+
+
+                } catch (error) {
+
+                    showMessage(
+                        error.message,
+                        "error"
+                    );
+
+
+                    button.disabled =
+                        false;
+
+
+                    button.innerHTML =
+                        '<i class="fa-solid fa-cloud-arrow-up"></i> Kirim Bukti ke Admin';
+
+                }
+
+            };
+
+
+        reader.readAsDataURL(
+            file
+        );
+
+
+    } catch (error) {
+
+        showMessage(
+            error.message,
+            "error"
+        );
+
+
+        button.disabled =
+            false;
+
+
+        button.innerHTML =
+            '<i class="fa-solid fa-cloud-arrow-up"></i> Kirim Bukti ke Admin';
+
+    }
+
+}
+
+
+/* =====================================
+   CHECK STATUS
+===================================== */
+
+let statusTimer =
+    null;
+
+
+async function checkStatus() {
+
+    try {
+
+        const response =
+            await fetch(
+                "/api/status?id=" +
+                encodeURIComponent(
+                    sessionId
+                )
+            );
+
+
+        const data =
+            await response.json();
+
+
+        if (
+            data.status ===
+            "approved"
+        ) {
+
+            if (statusTimer) {
+
+                clearInterval(
+                    statusTimer
+                );
+
+            }
+
+
+            waitingSection
+                .classList
+                .remove("active");
+
+
+            approvedSection
+                .classList
+                .add("active");
+
+
+            document
+                .getElementById(
+                    "downloadButton"
+                )
+                .classList
+                .add("show");
+
+
+            return;
+
+        }
+
+
+        document
+            .getElementById(
+                "statusText"
+            )
+            .textContent =
+            data.status === "rejected"
+                ? "DITOLAK"
+                : "MENUNGGU";
+
+
+    } catch (error) {
+
+        console.error(
+            "Gagal mengecek status:",
+            error
+        );
+
+    }
+
+}
+
+
+/* =====================================
+   START STATUS CHECKING
+===================================== */
+
+function startStatusChecking() {
+
+    checkStatus();
+
+
+    statusTimer =
+        setInterval(
+            checkStatus,
+            5000
+        );
+
+}
+
+</script>
+
+</body>
+
+</html>
